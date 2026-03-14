@@ -1,7 +1,7 @@
 {
   "domain": "open_meteo_pollen",
   "name": "Open-Meteo Pollen",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "documentation": "https://open-meteo.com/en/docs/air-quality-api",
   "issue_tracker": "https://github.com/openclaw/openclaw/issues",
   "config_flow": true,
