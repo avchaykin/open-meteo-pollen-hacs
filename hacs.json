@@ -1,7 +1,7 @@
 {
   "name": "Open-Meteo Pollen",
   "render_readme": true,
-  "homeassistant": ">=2025.1.0",
+  "homeassistant": "2025.1.0",
   "country": ["FR"],
   "filename": "open_meteo_pollen.zip"
 }
