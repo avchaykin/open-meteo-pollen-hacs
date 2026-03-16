@@ -9,11 +9,7 @@ from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
-from .const import (
-    ATTR_UPDATED_AT,
-    CONF_LOCATION_NAME,
-    DOMAIN,
-)
+from .const import ATTR_UPDATED_AT, CONF_LOCATION_NAME, DOMAIN
 from .coordinator import OpenMeteoPollenCoordinator
 
 
@@ -80,13 +76,7 @@ async def async_setup_entry(
     entry: ConfigEntry,
     async_add_entities: AddEntitiesCallback,
 ) -> None:
-    coordinator = OpenMeteoPollenCoordinator(
-        hass,
-        latitude=float(entry.data["latitude"]),
-        longitude=float(entry.data["longitude"]),
-        timezone=str(entry.data["timezone"]),
-    )
-    await coordinator.async_config_entry_first_refresh()
+    coordinator: OpenMeteoPollenCoordinator = hass.data[DOMAIN][entry.entry_id]
 
     location_name = str(entry.data.get(CONF_LOCATION_NAME, "Location"))
 

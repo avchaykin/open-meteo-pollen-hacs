@@ -6,6 +6,7 @@ Custom Home Assistant integration that provides pollen and air quality sensors f
 
 - Config flow in UI (enter city/address)
 - Hourly polling from Open-Meteo Air Quality API
+- Config-entry reload support (changes can be applied without full HA restart)
 - Sensors:
   - Alder Pollen
   - Birch Pollen
